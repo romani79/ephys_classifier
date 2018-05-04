@@ -5,5 +5,10 @@ features = ['time_to_first_spike', 'burst_number', 'adaptation_index']
 
 traces = cl.abf_to_traces(path)
 etypes = cl.trace_classifier(traces, features)
+
+t = traces[-1]
+
+plot(t['T'], t['V'])
+
 print etypes
 
